@@ -1,0 +1,86 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {
+      animation: {
+        fade: "FadeInUp 700ms ease 1 forwards",
+      },
+      keyframes: {
+        FadeInUp: {
+          "0%": { transform: "translateY(15px)", opacity: "0" },
+          "100%": { transform: "translateY(0px)", opacity: "1" },
+        },
+      },
+      backgroundImage: {
+        open: "url('../images/svg/hamburguesa.svg')",
+        close: "url('../images/svg/close.svg')",
+        fondoDesktop: "url('../images/img/image_1.png')",
+        fondoMobile: "url('../images/img/image_8.png')",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
+      screens: {
+        xs: "320px",
+        "2xs": "370px",
+        sm: "640px",
+        md: "768px",
+        "2md": "1000px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+      },
+      stroke: (theme) => ({
+        custom: theme("colors.black"),
+        strokeWithe: "#ffffff",
+        strokeAzul: "#2E609D",
+      }),
+      fill: (theme) => ({
+        fillWhite: "#FFFFFF",
+        fillGrisStrong: "#575756",
+        fillGrisSuave: "#565555",
+        fillVerde: "#289A7B",
+        fillAzil: "#2E67A4",
+      }),
+      textColor: {
+        primary: "#023B54",
+        secondary: "#FF7B29",
+        paragraph: "#818B90",
+      },
+      backgroundColor: {
+        primary: "#2C7393",
+        secondary: "#023B54",
+        paragraph: "#818B90",
+      },
+      fontSize: {
+        text10: "10px",
+        text12: "12px",
+        text14: "14px",
+        text16: "16px",
+        text18: "18px",
+        text20: "20px",
+        text22: "22px",
+        text24: "24px",
+        text26: "26px",
+        text28: "28px",
+        text32: "32px",
+        text34: "34px",
+        text36: "36px",
+        text40: "40px",
+        text44: "44px",
+        text46: "46px",
+        text48: "48px",
+        text50: "50px",
+        text52: "52px",
+        text56: "56px",
+        text60: "60px",
+        text64: "64px",
+        text72: "72px",
+        text76: "76px",
+        text80: "80px",
+      },
+    },
+  },
+  plugins: [],
+};
